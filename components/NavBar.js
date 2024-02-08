@@ -1,6 +1,6 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Image, Text } from 'react-native';
+import { Image } from 'react-native';
 
 import HomeScreen from '../screens/HomeScreen';
 import AIScreen from '../screens/AIScreen';
@@ -29,29 +29,15 @@ const NavBar = () => {
 
           const tintColor = focused ? color : 'black'; 
 
-          return <Image source={iconName} style={{ width: size, height: size, tintColor: tintColor }} />;
+          return <Image source={iconName} style={{ width: size, height: size, tintColor: tintColor, alignSelf: 'center' }} />;
         },
-        tabBarLabel: ({ focused, color }) => {
-          let label;
-
-          if (route.name === 'HomeScreen') {
-            label = 'Home Screen';
-          } else if (route.name === 'AIScreen') {
-            label = 'AI Screen';
-          } else if (route.name === 'InboxScreen') {
-            label = 'Inbox Screen';
-          } else if (route.name === 'SettingsScreen') {
-            label = 'Settings Screen';
-          }
-
-          return <Text style={{ color, fontSize: 11 }}>{label}</Text>;
-        },
+        tabBarLabel: ''
       })}
     >
-      <Tab.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="AIScreen" component={AIScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="InboxScreen" component={InboxScreen} options={{ headerShown: false }} />
-      <Tab.Screen name="SettingsScreen" component={SettingScreen} options={{ headerShown: false }} />
+      <Tab.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false, tabBarLabel: '' }} />
+      <Tab.Screen name="AIScreen" component={AIScreen} options={{ headerShown: false, tabBarLabel: '' }} />
+      <Tab.Screen name="InboxScreen" component={InboxScreen} options={{ headerShown: false, tabBarLabel: '' }} />
+      <Tab.Screen name="SettingsScreen" component={SettingScreen} options={{ headerShown: false, tabBarLabel: '' }} />
     </Tab.Navigator>
   );
 }
