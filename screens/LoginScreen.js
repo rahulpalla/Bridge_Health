@@ -16,6 +16,14 @@ const LoginScreen = ({ navigation }) => {
   const [user, setUser] = useState({});
   const [role, setRole] = useState("");
 
+  const handleLogin = () => {
+    // Perform login actions here, such as validating user credentials
+    // and storing tokens if necessary.
+    
+    // For now, let's assume the login is successful and navigate to the home screen.
+    navigation.navigate("Home Screen");
+  };
+
   return (
     <KeyboardAwareScrollView
       resetScrollToCoords={{ x: 0, y: 0 }}
@@ -60,10 +68,10 @@ const LoginScreen = ({ navigation }) => {
       />
       <TouchableOpacity
         style={styles.getStartedButton}
-        // onPress={handleSignIn}
+        onPress={handleLogin}
         underlayColor="#fff"
       >
-        <Text style={styles.getStartedText}>Log In</Text>
+        <Text style={styles.getStartedText}>Login</Text>
       </TouchableOpacity>
     </KeyboardAwareScrollView>
   );

@@ -15,7 +15,7 @@ const WelcomeScreen = ({ navigation }) => {
       <TouchableOpacity
         style={[commonStyles.getStartedButton, { marginTop: 50, width: "auto" }]}
         onPress={() =>
-          navigation.navigate("Log In Screen")
+          navigation.navigate("Login Screen")
         }
         underlayColor="#fff"
       >
