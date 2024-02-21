@@ -29,7 +29,7 @@ const HomeScreen = () => {
       <View style={styles.graphContainer}>
         <Animated.View style={{ opacity: fadeAnim }}>
           <Text style={styles.title}>Glucose Summary</Text>
-          <DayBarGraph style={styles.dayBarGraphStyles}></DayBarGraph>
+          <DayBarGraph/>
         </Animated.View>
       </View>
     </View>
@@ -52,10 +52,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Avenir',
   },
-  dayBarGraphStyles:{
-    // height: 100,
-    borderRadius: 50,
-  },
   graphContainer:{
     position: 'absolute', 
     justifyContent: 'center', 
@@ -64,9 +60,9 @@ const styles = StyleSheet.create({
     margin: 10,
     // Shadow Style
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
+    shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    shadowRadius: 5,
     elevation: 5,
   }
 });

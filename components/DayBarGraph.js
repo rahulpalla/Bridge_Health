@@ -58,8 +58,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#ffffff',
     paddingHorizontal: 20,
-  
-    
+    borderRadius: 25,
   },
   date: {
     fontSize: 18,
