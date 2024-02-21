@@ -11,7 +11,7 @@ const DayBarGraph = () => {
     '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM', '9 PM', '10 PM', '11 PM'],
     datasets: [
       {
-        data: [20, 45, 28, 80, 99, 43, 20, 45, 28, 80, 99, 43, 20, 45, 28, 80, 99, 43, 20, 45, 28, 80, 99, 43],
+        data: [82, 95, 110, 97, 115, 91, 88, 90, 97, 100, 92, 95, 105, 112, 97, 95, 99, 101, 97, 95, 92, 87, 99, 101],
       },
     ],
   };
@@ -64,7 +64,6 @@ const styles = StyleSheet.create({
   date: {
     fontSize: 21,
     fontFamily: 'Avenir',
-    marginBottom: 10,
     padding: 20,
   },
   graph: {
