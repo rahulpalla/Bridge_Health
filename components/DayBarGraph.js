@@ -58,12 +58,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#ffffff',
     paddingHorizontal: 20,
+    margin: 15,
     borderRadius: 25,
   },
   date: {
-    fontSize: 18,
+    fontSize: 21,
     fontFamily: 'Avenir',
     marginBottom: 10,
+    padding: 20,
   },
   graph: {
     marginVertical: 8,

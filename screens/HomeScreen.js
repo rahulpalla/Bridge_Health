@@ -19,7 +19,7 @@ const HomeScreen = () => {
   }, [fadeAnim]);
 
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: "white"}}>
       <View style={{ position: 'absolute', top: 60, left: 30 }}>
         <Animated.View style={{ opacity: fadeAnim }}>
           <Text style={styles.helloText}>Hello, {name}</Text>
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
     color: '#22CA07',
   },
   title: {
+    marginHorizontal: 15,
     fontSize: 24,
     fontWeight: 'bold',
     fontFamily: 'Avenir',
@@ -59,11 +60,11 @@ const styles = StyleSheet.create({
     marginTop: 150, 
     margin: 10,
     // Shadow Style
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.25,
-    shadowRadius: 5,
-    elevation: 5,
+    shadowColor: '#171717',
+    shadowOffset: {width: 0, height: 10},
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    elevation: 8,
   }
 });
 
