@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Animated, StyleSheet, ScrollView } from 'react-native';
 import DayBarGraph from '../components/DayBarGraph'; // Import the DayBarGraph component
+import WeekBarGraph from '../components/WeekBarGraph'; //Import the WeekBarGraph component
 
 const HomeScreen = () => {
   const [fadeAnim] = useState(new Animated.Value(0)); // Initial opacity set to 0
