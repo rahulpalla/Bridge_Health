@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Animated, StyleSheet } from 'react-native';
+import { View, Text, Animated, StyleSheet, ScrollView } from 'react-native';
 import DayBarGraph from '../components/DayBarGraph'; // Import the DayBarGraph component
 
 const HomeScreen = () => {
@@ -26,7 +26,7 @@ const HomeScreen = () => {
           <Text style={styles.deviceStatus}>Device Connected</Text>
         </Animated.View>
       </View>
-      <View style={{ position: 'absolute', top: 500, left: 30 }}>
+      <View style={styles.graphContainer}>
         <Animated.View style={{ opacity: fadeAnim }}>
           <Text style={styles.title}>Glucose Summary</Text>
           <DayBarGraph style={styles.dayBarGraphStyles}></DayBarGraph>
@@ -53,9 +53,22 @@ const styles = StyleSheet.create({
     fontFamily: 'Avenir',
   },
   dayBarGraphStyles:{
-    paddingLeft: 20,
-    paddingRight: 20,
+    // height: 100,
+    borderRadius: 50,
   },
+  graphContainer:{
+    position: 'absolute', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    marginTop: 150, 
+    margin: 10,
+    // Shadow Style
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  }
 });
 
 export default HomeScreen;
