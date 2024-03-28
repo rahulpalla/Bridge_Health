@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     paddingHorizontal: 20,
   },
-  // Quiz Screen
   backArrow: {
     position: "absolute",
     left: 30,
@@ -109,16 +108,6 @@ const styles = StyleSheet.create({
     height: 45,
     top: -20,
     backgroundColor: "rgba(0, 0, 0, 0.4)",
-  },
-  creatQuestion: {
-    width: "100%",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: colors.primary,
-    borderRadius: 50,
-    marginBottom: 10,
-    paddingVertical: 30,
-    paddingHorizontal: 10,
   },
   creatQuestion: {
     width: "100%",
@@ -182,35 +171,31 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop: -9,
   },
-  topFillerView: {
-    position: "absolute",
-    width: "100%",
-    height: 45,
-    top: -20,
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
+  graphContainer: {
+    // position: 'absolute', 
+    alignItems: 'center', 
+    marginTop: 0, 
+    marginHorizontal: 10,
+    height: '20%',
+    // Shadow Style
+    shadowColor: '#171717',
+    shadowOffset: {width: 0, height: 10},
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    elevation: 8,
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "rgba(0, 0, 0, 0.4)",
+  titleGlucoseSummary: {
+    marginLeft: 35,
+    fontSize: 24,
+    fontWeight: 'bold',
+    fontFamily: 'Avenir',
   },
-  modalView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 20,
-    width: "70%",
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5,
-  },
+  modalSubtitle: {
+    color: 'gray',
+    fontSize: 18,
+    fontFamily: 'Avenir',
+    marginRight: 20,
+  }
 });
 
 
