@@ -5,13 +5,13 @@ import * as Font from 'expo-font';
 
 const messages = [
   { id: '1', sender: 'Dr. Doo Little', content: 'I love Rohan Patel', profilePicUrl: '/Users/zane/Documents/Github/Bridge_Health/assets/image 1.png', timeSent: '08:31 AM', messageCount: 5 },
-  { id: '1', sender: 'Dr. Doo Little', content: 'Rohan patel is bad as hell', profilePicUrl: '/Users/zane/Documents/Github/Bridge_Health/assets/image 1.png', timeSent: '08:31 AM', messageCount: 5 },
+  { id: '2', sender: 'Dr. Doo Little', content: 'Rohan patel is bad as hell', profilePicUrl: '/Users/zane/Documents/Github/Bridge_Health/assets/image 1.png', timeSent: '08:31 AM', messageCount: 5 },
 
 ];
 
-const InboxScreen = () => {
+const InboxScreen = ({navigation}) => {
   const renderItem = ({ item }) => (
-    <TouchableOpacity style={styles.itemContainer} onPress={() => console.log('Message ID:', item.id)}>
+    <TouchableOpacity style={styles.itemContainer} onPress={() => navigation.navigate('Message Screen', {})}>
       <Image source={{ uri: item.profilePicUrl }} style={styles.profilePic} />
       <View style={styles.messageContent}>
         <Text style={styles.sender}>{item.sender}</Text>

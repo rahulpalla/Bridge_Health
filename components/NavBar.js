@@ -1,13 +1,25 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Image } from 'react-native';
-
 import HomeScreen from '../screens/HomeScreen';
 import AIScreen from '../screens/AIScreen';
 import InboxScreen from '../screens/InboxScreen';
 import SettingScreen from '../screens/SettingsScreen';
+import MessageScreen from '../screens/MessageScreen';
 
 const Tab = createBottomTabNavigator();
+
+const Stack = createNativeStackNavigator();
+
+function MessageFlow() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Inbox" component={InboxScreen} options={{ headerShown: false, tabBarLabel: '' }} />
+      <Stack.Screen name="Message Screen" component={MessageScreen} options={{ headerShown: true, tabBarLabel: '' }}/>
+    </Stack.Navigator>
+  );
+}
 
 const NavBar = () => {
   return (
@@ -36,7 +48,7 @@ const NavBar = () => {
     >
       <Tab.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false, tabBarLabel: '' }} />
       <Tab.Screen name="AIScreen" component={AIScreen} options={{ headerShown: false, tabBarLabel: '' }} />
-      <Tab.Screen name="InboxScreen" component={InboxScreen} options={{ headerShown: false, tabBarLabel: '' }} />
+      <Tab.Screen name="InboxScreen" component={MessageFlow} options={{ headerShown: false, tabBarLabel: '' }} />
       <Tab.Screen name="SettingsScreen" component={SettingScreen} options={{ headerShown: false, tabBarLabel: '' }} />
     </Tab.Navigator>
   );
