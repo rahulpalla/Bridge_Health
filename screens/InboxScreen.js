@@ -4,9 +4,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import * as Font from 'expo-font';
 
 const messages = [
-  { id: '1', sender: 'Dr. Doo Little', content: 'I love Rohan Patel', profilePicUrl: '/Users/zane/Documents/Github/Bridge_Health/assets/image 1.png', timeSent: '08:31 AM', messageCount: 5 },
-  { id: '2', sender: 'Dr. Doo Little', content: 'Rohan patel is bad as hell', profilePicUrl: '/Users/zane/Documents/Github/Bridge_Health/assets/image 1.png', timeSent: '08:31 AM', messageCount: 5 },
-
+  { id: '1', sender: 'Dr. Doo Little', content: 'I love Rohan Patel', profilePicUrl: '/Users/zane/Documents/Github/Bridge_Health/assets/image_1.png', timeSent: '08:31 AM', messageCount: 5 },
+  { id: '2', sender: 'Dr. Doo Little', content: 'Rohan patel is bad as hell', profilePicUrl: '/Users/zane/Documents/Github/Bridge_Health/assets/image_1.png', timeSent: '08:31 AM', messageCount: 5 },
 ];
 
 const InboxScreen = ({navigation}) => {

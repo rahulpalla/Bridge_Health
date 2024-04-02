@@ -7,19 +7,12 @@ import AIScreen from '../screens/AIScreen';
 import InboxScreen from '../screens/InboxScreen';
 import SettingScreen from '../screens/SettingsScreen';
 import MessageScreen from '../screens/MessageScreen';
+import { View, Text, FlatList, StyleSheet } from 'react-native';
+import MessageFlow from './MessageFlow';
 
 const Tab = createBottomTabNavigator();
 
 const Stack = createNativeStackNavigator();
-
-function MessageFlow() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Inbox" component={InboxScreen} options={{ headerShown: false, tabBarLabel: '' }} />
-      <Stack.Screen name="Message Screen" component={MessageScreen} options={{ headerShown: true, tabBarLabel: '' }}/>
-    </Stack.Navigator>
-  );
-}
 
 const NavBar = () => {
   return (
