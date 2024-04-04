@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     paddingRight: 30,
   },
   headerTitle: {
-    fontFamily: 'Gilroy-SemiBold', // Make sure this font is linked in your React Native project
+    // fontFamily: 'Gilroy-SemiBold', // Make sure this font is linked in your React Native project
     fontStyle: 'normal',
     fontWeight: '500',
     fontSize: 18,
