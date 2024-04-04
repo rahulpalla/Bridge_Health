@@ -12,6 +12,9 @@ const CustomHeader = ({ userName, profilePic, navigation }) => {
         <Image source={{ uri: profilePic }} style={styles.profilePic} />
         <Text style={styles.userName}>{userName}</Text>
       </View>
+      <View>
+
+      </View>
     </View>
   );
 };
@@ -25,7 +28,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     backgroundColor: '#fff',
     paddingHorizontal: 10,
-    // borderBottomWidth: 1,
   },
   backButton: {
     marginRight: 10,
