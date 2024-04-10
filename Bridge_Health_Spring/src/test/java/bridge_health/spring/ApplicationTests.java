@@ -1,10 +1,10 @@
-package BridgeHealth.Bridge_Health_Spring;
+package bridge_health.spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class BridgeHealthSpringApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
