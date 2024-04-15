@@ -1,32 +1,39 @@
-package model;
+package bridge_health_spring.model;
 
 import lombok.Getter;
 import lombok.Setter;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
-//@Entity
+
+@Entity
 @Getter
 @Setter
 public class UserModel {
 
-   // @Id
-    //@GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-
-    private String username;
+    @Id
     private String email;
+    // @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    private Long id;
+    private String username;
     private String password;
     private String clientId;
     private String clientSecret;
+    private String firstName;
+    private String lastName;
 
     // Default constructor
     public UserModel() {}
 
     // Constructor with fields
     public UserModel(String username, String email, String password) {
+        System.out.println("MADE USER DAWG");
         this.username = username;
         this.email = email;
         this.password = password;
     }
+
+    
 
 
     // toString method for logging or debugging
