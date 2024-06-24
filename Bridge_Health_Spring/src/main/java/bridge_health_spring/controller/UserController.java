@@ -3,13 +3,12 @@ package bridge_health_spring.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
-// import bridge_health_spring.model.UserModel;
+import org.springframework.web.bind.annotation.*;
+import bridge_health_spring.model.UserModel;
 import bridge_health_spring.service.UserService;
 
 @RestController
+@RequestMapping("/users") // Optional base path for all user-related endpoints
 public class UserController {
 
     private final UserService userService;
@@ -19,7 +18,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/users/name")
+    @GetMapping("/name")
     public ResponseEntity<String> getUserFirstAndLastNameByEmail(@RequestParam String email) {
         String firstName = userService.getUserFirstNameByEmail(email);
         String lastName = userService.getUserLastNameByEmail(email);
@@ -30,6 +29,13 @@ public class UserController {
         }
     }
 
-
-    
+    @PostMapping("/create")
+    public ResponseEntity<String> createUser(@RequestBody UserModel user) {
+        boolean isCreated = userService.createUser(user);
+        if (isCreated) {
+            return ResponseEntity.status(HttpStatus.CREATED).body("User created successfully.");
+        } else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("User already exists or invalid data.");
+        }
+    }
 }

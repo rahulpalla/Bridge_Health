@@ -4,31 +4,33 @@ import lombok.Getter;
 import lombok.Setter;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
 @Entity
 @Getter
 @Setter
+@Table(name = "user_table")
 public class UserModel {
 
     @Id
-    private String email;
     // @GeneratedValue(strategy = GenerationType.IDENTITY)
 //    private Long id;
-    private String username;
+    // private String username;
+    private String email;
     private String password;
-    private String clientId;
-    private String clientSecret;
     private String firstName;
     private String lastName;
+    // private String clientId;
+    // private String clientSecret;
 
     // Default constructor
+    
     public UserModel() {}
 
     // Constructor with fields
-    public UserModel(String username, String email, String password) {
-        System.out.println("MADE USER DAWG");
-        this.username = username;
+    public UserModel(String email, String password) {
+        // System.out.println("MADE USER DAWG");
         this.email = email;
         this.password = password;
     }
@@ -41,7 +43,6 @@ public class UserModel {
     public String toString() {
         return "UserModel{" +
                 //"id=" + id +
-                ", username='" + username + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
